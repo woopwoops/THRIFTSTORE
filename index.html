@@ -129,6 +129,7 @@
       font-weight: 600;
       transition: 0.3s;
       margin-bottom: 1rem;
+      cursor: pointer;
     }
 
     .cart-btn:hover {
@@ -175,7 +176,7 @@
       <a href="#">Home</a>
       <a href="#products">Shop</a>
       <a href="#contact">Contact</a>
-      <span id="cart" style="margin-left: 2rem;">🛒 <span class="cart-count" id="cart-count">0</span></span>
+      <span id="cart" style="margin-left: 2rem; cursor: pointer;">🛒 <span class="cart-count" id="cart-count">0</span></span>
     </nav>
   </header>
 
@@ -210,15 +211,39 @@
         <p>NPR 1,800</p>
         <button class="cart-btn">Add to Cart</button>
       </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246" alt="Denim Jacket">
+        <h3>Denim Jacket</h3>
+        <p>NPR 2,200</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1593032465170-eaf67a2d89f5" alt="Vintage Shirt">
+        <h3>Vintage Shirt</h3>
+        <p>NPR 1,100</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" alt="Urban Hoodie">
+        <h3>Urban Hoodie</h3>
+        <p>NPR 1,900</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1600185365481-bca48a6b2f11" alt="Minimal Tee">
+        <h3>Minimal Tee</h3>
+        <p>NPR 850</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
     </div>
   </section>
 
-  <footer id="contact">
+  <footer id="contact"> 9706942371
     <p>&copy; 2025 THRIFTSTORE. All rights reserved.</p>
     <div class="social-links">
-      <a href="https://www.instagram.com/" target="1am.gagan">Instagram</a>
-      <a href="https://www.facebook.com/" target="Gagan T. kshetri">Facebook</a>
-      <a href="https://www.tiktok.com/" target="gagan07">TikTok</a>
+      <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+      <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
     </div>
   </footer>
 
@@ -231,7 +256,7 @@
       button.addEventListener('click', () => {
         cartCount++;
         cartCountElement.textContent = cartCount;
-        alert('Item added to cart!');
+        alert('🛒 Item added to cart!');
       });
     });
   </script>
