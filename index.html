@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THRIFTSTORE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #fafafa, #f0f0f0);
+      color: #222;
+    }
+
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 1.5rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-family: 'Archivo Black', sans-serif;
+      letter-spacing: 3px;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 2rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #facc15;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1581579185169-5825f1f4f1b2') center/cover no-repeat;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 1.5rem 3rem;
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+    }
+
+    section.products {
+      padding: 4rem 2rem;
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    section.products h2 {
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .product {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      transition: 0.4s ease;
+    }
+
+    .product:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .product img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .product h3 {
+      font-size: 1.4rem;
+      margin: 1rem 0 0.5rem;
+    }
+
+    .product p {
+      font-weight: 600;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+
+    .cart-btn {
+      display: inline-block;
+      background-color: #000;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+      margin-bottom: 1rem;
+    }
+
+    .cart-btn:hover {
+      background-color: #facc15;
+      color: #000;
+    }
+
+    .cart-count {
+      background-color: #f43f5e;
+      color: white;
+      border-radius: 50%;
+      padding: 0.3rem 0.7rem;
+      font-size: 0.9rem;
+      position: relative;
+      top: -10px;
+      right: 10px;
+    }
+
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+      margin-top: 5rem;
+    }
+
+    .social-links a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-size: 1.3rem;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #facc15;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">THRIFTSTORE</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#products">Shop</a>
+      <a href="#contact">Contact</a>
+      <span id="cart" style="margin-left: 2rem;">🛒 <span class="cart-count" id="cart-count">0</span></span>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Discover Timeless Style with THRIFTSTORE</h1>
+  </div>
+
+  <section class="products" id="products">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2" alt="Vintage Jacket">
+        <h3>Vintage Jacket</h3>
+        <p>NPR 1,500</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1600185365483-26a1aaf3d5f9" alt="Retro T-Shirt">
+        <h3>Retro T-Shirt</h3>
+        <p>NPR 900</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1600180758890-6ac10479b381" alt="High-Waist Jeans">
+        <h3>High-Waist Jeans</h3>
+        <p>NPR 1,200</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1600185365254-cbd63fd2035b" alt="Classic Hoodie">
+        <h3>Classic Hoodie</h3>
+        <p>NPR 1,800</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>&copy; 2025 THRIFTSTORE. All rights reserved.</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/" target="1am.gagan">Instagram</a>
+      <a href="https://www.facebook.com/" target="Gagan T. kshetri">Facebook</a>
+      <a href="https://www.tiktok.com/" target="gagan07">TikTok</a>
+    </div>
+  </footer>
+
+  <script>
+    let cartCount = 0;
+    const cartCountElement = document.getElementById('cart-count');
+    const buttons = document.querySelectorAll('.cart-btn');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        cartCount++;
+        cartCountElement.textContent = cartCount;
+        alert('Item added to cart!');
+      });
+    });
+  </script>
+</body>
+</html>
